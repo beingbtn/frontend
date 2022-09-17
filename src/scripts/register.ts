@@ -11,7 +11,7 @@ form.addEventListener('submit', async (event) => {
     console.log(username.value, password.value);
 
     try {
-        await fetch(`https://btn.attitduing.workers.dev/register?username=${username.value}&password=${password.value}`);
+        await fetch(`https://btn.attituding.workers.dev/register?username=${username.value}&password=${password.value}`);
     } catch (error) {
         output.textContent = (error as Error)?.message;
     }
