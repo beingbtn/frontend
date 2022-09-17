@@ -1,6 +1,5 @@
 ---
 import Base from './Base.astro';
-import Link from '../components/Link.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 
@@ -10,7 +9,7 @@ export interface Props {
 
 const { title } = Astro.props as Props;
 
-const description = 'together, we are better than nicholas';
+const description = 'Better than nicholas';
 const icon = '/pfp.webp';
 const site = 'BTN';
 const titleMeta = title ? `${title} - ${site}` : site;
