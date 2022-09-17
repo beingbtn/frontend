@@ -1,0 +1,48 @@
+---
+import Block from '../components/Block.astro';
+import Title from '../components/Title.astro';
+import LayoutNormal from '../layouts/LayoutNormal.astro';
+---
+
+<LayoutNormal title="Register">
+    <Block>
+        <Title
+            heading="1"
+            title="Register"
+        />
+    </Block>
+    <form class="flex flex-col gap-8">
+        <Block>
+            <input
+                class="bg-light-2 dark:bg-dark-2 py-2 px-4 rounded-full outline-none max-w-sm w-full"
+                placeholder="Username"
+                size="25"
+                type="text"
+                required
+            />
+            <input
+                class="bg-light-2 dark:bg-dark-2 py-2 px-4 rounded-full outline-none max-w-sm w-full"
+                placeholder="Password"
+                size="128"
+                type="password"
+                required
+            />
+            <input
+                class="bg-light-2 dark:bg-dark-2 py-2 px-4 rounded-full outline-none max-w-sm w-full"
+                placeholder="Confirm Password"
+                size="128"
+                type="password"
+                required
+            />
+        </Block>
+        <Block>
+            <input
+                class="bg-light-2 dark:bg-dark-2 py-2 px-4 rounded-full outline-none max-w-sm w-full"
+                size="128"
+                type="submit"
+                value="Submit"
+                required
+            />
+        </Block>
+    </form>
+</LayoutNormal>
