@@ -29,10 +29,10 @@ if (
         window.location.replace('https://www.fbi.gov');
     }
 } else {
-    const scopes = ['identity'].join('%20');
+    const scopes = ['identify'].join('%20');
     const clientId = '1021144846909579346';
     const state = window.crypto.randomUUID();
-    const url = `https://discord.com/oauth2/authorize?response_type=token&client_id=${clientId}&state=${state}&scope=${scopes}`;
+    const url = `https://discord.com/oauth2/authorize?response_type=token&client_id=${clientId}&state=${state}&scope=${scopes}&redirect_uri=https%3A%2F%2Fbtn.attituding.live%2Fregister`;
 
     localStorage.setItem('state', window.crypto.randomUUID());
 
