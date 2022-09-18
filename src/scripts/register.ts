@@ -26,7 +26,8 @@ if (
 
             window.location.replace('/members');
         } catch (error) {
-            window.location.replace(`/?error=${(error as Error)?.stack}`);
+            console.log(error, (error as Error)?.stack);
+            // window.location.replace(`/?error=${(error as Error)?.stack}`);
         }
     } else {
         
