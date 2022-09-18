@@ -17,6 +17,7 @@ if (
 ) {
     console.log(accessTokenFragment, tokenTypeFragment, expiresInFragment, scopeFragment, stateFragment);
 
+
     if (stateFragment === localStorage.getItem('state')) {
         const url = `https://btn.attituding.workers.dev/register?access_token=${accessTokenFragment}&token_type=${tokenTypeFragment}`;
 
@@ -28,7 +29,7 @@ if (
             window.location.replace(`/?error=${(error as Error)?.stack}`);
         }
     } else {
-        window.location.replace('https://www.fbi.gov');
+        
     }
 } else {
     const scopes = ['identify'].join('%20');
