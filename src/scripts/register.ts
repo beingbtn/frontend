@@ -9,14 +9,24 @@ form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     try {
-        await fetch(
+        output.textContent = '';
+
+        const response = await fetch(
             `https://btn.attituding.workers.dev/register?username=${username.value}&password=${password.value}`,
         );
 
-        username.value = '';
-        password.value = '';
+        const text = await response.text();
 
-        window.location.href = '/home';
+        switch (response.status) {
+            case 200:
+                username.value = '';
+                password.value = '';
+
+                window.location.href = '/home';
+                break;
+            default: 
+                output.textContent = text || response.statusText;
+        }
     } catch (error) {
         output.textContent = (error as Error)?.message;
     }
