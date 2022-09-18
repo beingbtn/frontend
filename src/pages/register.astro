@@ -14,7 +14,10 @@ import Text from '../components/Text.astro';
         />
     </Block>
     <Block>
-        <form class="flex flex-col gap-8" id="form">
+        <form
+            class="flex flex-col gap-8"
+            id="form"
+        >
             <Block>
                 <input
                     class="bg-light-2 dark:bg-dark-2 py-2 px-4 rounded-full outline-none max-w-sm w-full"
@@ -47,7 +50,17 @@ import Text from '../components/Text.astro';
     </Block>
     <Block>
         <Paragraph>
-            <Text id="output"></Text>
+            <Text>Already have an account? Login by <a
+                class="text-light-1 dark:text-dark-1 font-bold"
+                href='/login'
+                target="_self"
+                >clicking here</a
+            ></Text>
+        </Paragraph>
+    </Block>
+    <Block>
+        <Paragraph>
+            <Text id="output" />
         </Paragraph>
     </Block>
     <script>
