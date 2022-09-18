@@ -1,54 +1,8 @@
 ---
-import Block from '../components/Block.astro';
-import Paragraph from '../components/Paragraph.astro';
-import Title from '../components/Title.astro';
 import LayoutNormal from '../layouts/LayoutNormal.astro';
-import Text from '../components/Text.astro';
 ---
 
 <LayoutNormal title="Register">
-    <Block>
-        <Title
-            heading="1"
-            title="Register"
-        />
-    </Block>
-    <form
-        class="flex flex-col gap-8"
-        id="form"
-    >
-        <Block>
-            <input
-                class="bg-light-2 dark:bg-dark-2 py-2 px-4 rounded-full outline-none max-w-sm w-full"
-                id="username"
-                placeholder="Username"
-                size="25"
-                type="text"
-                required
-            />
-            <input
-                class="bg-light-2 dark:bg-dark-2 py-2 px-4 rounded-full outline-none max-w-sm w-full"
-                id="password"
-                placeholder="Password"
-                size="128"
-                type="password"
-                required
-            />
-            <input
-                class="bg-light-2 dark:bg-dark-2 py-2 px-4 rounded-full outline-none max-w-sm w-full hover:dark:bg-dark-3 hover:bg-light-3 active:dark:bg-dark-4 active:bg-light-4 cursor-pointer"
-                id="submit"
-                size="128"
-                type="submit"
-                value="Submit"
-                required
-            />
-        </Block>
-    </form>
-    <Block>
-        <Paragraph>
-            <Text id="output" />
-        </Paragraph>
-    </Block>
     <script>
         import '../scripts/register.js';
     </script>
