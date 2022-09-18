@@ -24,6 +24,11 @@ form.addEventListener('submit', async (event) => {
 
                 window.location.href = '/home';
                 break;
+            case 403:
+                username.value = '';
+                password.value = '';
+
+                output.textContent = text || response.statusText;
             default: 
                 output.textContent = text || response.statusText;
         }

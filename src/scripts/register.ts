@@ -17,6 +17,8 @@ form.addEventListener('submit', async (event) => {
 
         const text = await response.text();
 
+        console.log(text, response.statusText);
+
         switch (response.status) {
             case 200:
                 username.value = '';
@@ -24,6 +26,11 @@ form.addEventListener('submit', async (event) => {
 
                 window.location.href = '/home';
                 break;
+            case 403:
+                username.value = '';
+                password.value = '';
+
+                output.textContent = text || response.statusText;
             default: 
                 output.textContent = text || response.statusText;
         }

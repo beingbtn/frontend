@@ -1,5 +1,6 @@
 ---
 import Base from './Base.astro';
+import Link from '../components/Link.astro';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
 
@@ -10,7 +11,7 @@ export interface Props {
 const { title } = Astro.props as Props;
 
 const description = 'Better than nicholas';
-const icon = '/pfp.webp';
+const icon = '/icon.webp';
 const site = 'BTN';
 const titleMeta = title ? `${title} - ${site}` : site;
 ---
@@ -27,6 +28,7 @@ const titleMeta = title ? `${title} - ${site}` : site;
         icon={icon}
         site={site}
     >
+        <Link href="https://discord.gg/MvS32B7WR9" label="Discord" />
     </Header>
     <div class="flex justify-center">
         <main class="flex flex-col max-w-[80rem] w-[80rem] sm:p-12 p-4 sm:gap-12 gap-8 h5">
