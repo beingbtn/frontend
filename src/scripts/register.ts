@@ -15,6 +15,8 @@ if (
     scopeFragment &&
     stateFragment
 ) {
+    console.log(accessTokenFragment, tokenTypeFragment, expiresInFragment, scopeFragment, stateFragment);
+
     if (stateFragment === localStorage.getItem('state')) {
         const url = `https://btn.attituding.workers.dev/register?access_token=${accessTokenFragment}&token_type=${tokenTypeFragment}`;
 
@@ -34,7 +36,7 @@ if (
     const state = window.crypto.randomUUID();
     const url = `https://discord.com/oauth2/authorize?response_type=token&client_id=${clientId}&state=${state}&scope=${scopes}&redirect_uri=https%3A%2F%2Fbtn.attituding.live%2Fregister`;
 
-    localStorage.setItem('state', window.crypto.randomUUID());
+    localStorage.setItem('state', state);
 
     window.location.replace(url);
 }
