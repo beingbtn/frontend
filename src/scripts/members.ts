@@ -1,6 +1,6 @@
-export {};
-
 import type { APIUser } from 'discord-api-types/v10';
+
+export {};
 
 const request = await fetch('https://btn.attituding.workers.dev/members');
 
