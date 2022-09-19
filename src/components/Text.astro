@@ -4,7 +4,7 @@ export interface Props {
     id?: string,
 }
 
-const { heading, id } = Astro.props as Props;
+const { heading } = Astro.props as Props;
 ---
 
-<span class={`text-light-3 dark:text-dark-3 h${heading}`} id={id}><slot /></span>
+<span class={`text-light-3 dark:text-dark-3 h${heading}`}><slot /></span>
