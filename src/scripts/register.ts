@@ -16,10 +16,12 @@ if (
     stateFragment
 ) {
     if (stateFragment === localStorage.getItem('state')) {
-        const url = `https://btn.attituding.workers.dev/register?access_token=${accessTokenFragment}&token_type=${tokenTypeFragment}`;
-
         try {
-            await fetch(url, { method: 'POST' });
+            await fetch(
+                `https://btn.attituding.workers.dev/member?access_token=${accessTokenFragment}&token_type=${tokenTypeFragment}`, {
+                    method: 'POST'
+                },
+            );
 
             window.location.replace('/members');
         } catch (error) {
