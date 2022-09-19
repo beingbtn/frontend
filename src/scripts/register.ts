@@ -17,15 +17,19 @@ if (
 ) {
     if (stateFragment === localStorage.getItem('state')) {
         try {
-            await fetch(
+            const request = await fetch(
                 `https://btn.attituding.workers.dev/member?access_token=${accessTokenFragment}&token_type=${tokenTypeFragment}`, {
                     method: 'POST'
                 },
             );
 
-            window.location.href = '/members';
+            if (request.ok) {
+                window.location.href = '/members';
+            } else {
+                throw new Error(await request.text());
+            }
         } catch (error) {
-            window.location.href = `/?error=${error}+${(error as Error)?.stack}`;
+            window.location.href = `/?please+report+this+error=${error}+${(error as Error)?.stack}`;
         }
     } else {
         window.location.href = 'https://www.fbi.gov';
