@@ -6,7 +6,7 @@ const request = await fetch('https://btn.attituding.workers.dev/members');
 
 const users = (await request.json()) as APIUser[];
 
-const memberList = document.getElementById('member-list')!;
+const memberList = document.getElementById('member-list')!.parentElement!;
 
 users.forEach((user) => {
     const avatarURL = user.avatar
