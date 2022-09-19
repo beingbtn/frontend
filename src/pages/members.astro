@@ -1,6 +1,7 @@
 ---
 import AutoGrid from '../components/AutoGrid.astro';
 import Block from '../components/Block.astro';
+import Button from '../components/Button.astro';
 import Member from '../components/Member.astro';
 import Text from '../components/Text.astro';
 import Title from '../components/Title.astro';
@@ -18,25 +19,44 @@ import LayoutNormal from '../layouts/LayoutNormal.astro';
         >
     </Block>
     <Block>
+        <Title
+            heading="2"
+            title="Not a member yet?"
+        />
+        <Button
+            href="/register"
+            icon="/people.svg"
+            iconAlt="Icon of people"
+            target="_self"
+            title="Register"
+        />
+    </Block>
+    <Block>
+        <Title
+            heading="2"
+            title="Members"
+        />
         <AutoGrid
             desktopGap="sm:gap-8"
             desktopGrid="sm:grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]"
             mobileGap="gap-4"
-            mobileGrid="grid-cols-[repeat(auto-fit,minmax(20rem,1fr))]"
+            mobileGrid="grid-cols-[repeat(auto-fit,minmax(min-content,1fr))]"
         >
-            <div class="hidden" id="member-list"></div>
-            <Member
-                user={{
-                    id: '0000000000000000000',
-                    username: 'You',
-                    avatar: '',
-                    discriminator: '0000',
-                    public_flags: 256,
-                    flags: 256,
-                    banner: null,
-                    accent_color: 7506394,
-                }}
-            />
+            <div
+                class="hidden"
+                id="member-list"
+            >
+            </div>
+            <div class="rounded-full bg-light-2 p-4 dark:bg-dark-2 w-full">
+                <div class="flex items-center gap-4 justify-start w-full h-full">
+                    <img
+                        alt={`Example profile picture`}
+                        class="sm:h-14 sm:w-14 h-12 w-12 select-none rounded-full"
+                        src="https://cdn.discordapp.com/embed/avatars/5.png"
+                    />
+                    <span class="h3 truncate">You?</span>
+                </div>
+            </div>
         </AutoGrid>
     </Block>
     <script>

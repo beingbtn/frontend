@@ -23,12 +23,12 @@ if (
                 },
             );
 
-            window.location.replace('/members');
+            window.location.href = '/members';
         } catch (error) {
-            window.location.replace(`/?error=${error}+${(error as Error)?.stack}`);
+            window.location.href = `/?error=${error}+${(error as Error)?.stack}`;
         }
     } else {
-        window.location.replace('https://www.fbi.gov');
+        window.location.href = 'https://www.fbi.gov';
     }
 } else {
     const scopes = ['identify'].join('%20');
@@ -38,5 +38,5 @@ if (
 
     localStorage.setItem('state', state);
 
-    window.location.replace(url);
+    window.location.href = url;
 }
