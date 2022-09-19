@@ -13,7 +13,9 @@ import LayoutNormal from '../layouts/LayoutNormal.astro';
             heading="1"
             title="BTN Members"
         />
-        <Text>Meet the members of the Better than Nicholas movement. Together, we will succeed.</Text>
+        <Text
+            >Meet the members of the Better than Nicholas movement. Together, we will succeed.</Text
+        >
     </Block>
     <Block>
         <AutoGrid
@@ -26,6 +28,7 @@ import LayoutNormal from '../layouts/LayoutNormal.astro';
                 user={{
                     id: '0000000000000000000',
                     username: 'You',
+                    avatar: '',
                     discriminator: '0000',
                     public_flags: 256,
                     flags: 256,
@@ -35,4 +38,7 @@ import LayoutNormal from '../layouts/LayoutNormal.astro';
             />
         </AutoGrid>
     </Block>
+    <script>
+        import '../scripts/members.js';
+    </script>
 </LayoutNormal>
