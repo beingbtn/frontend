@@ -15,12 +15,12 @@ const { description, href, icon, iconAlt, maxWidth, title, target } = Astro.prop
 <a
     class={`transition-all ${
         maxWidth ?? ''
-    } w-full flex flex-col ${description ? 'rounded-4xl' : 'rounded-full'} group p-6 gap-2 bg-light-2 dark:bg-dark-2 hover:bg-light-3 hover:dark:bg-dark-3 active:bg-light-4 active:dark:bg-dark-4`}
+    } w-full flex flex-col rounded-5xl hover:rounded-4xl group p-6 gap-2 bg-light-2 dark:bg-dark-2 hover:bg-light-3 hover:dark:bg-dark-3 active:bg-light-4 active:dark:bg-dark-4`}
     href={href}
     target={target ?? '_blank'}
 >
     <div class="flex justify-between items-center">
-        <span class="sm:text-xl text-lg font-semibold flex-wrap">{title}</span>
+        <span class={`${description ? 'h4' : 'h3'} font-semibold flex-wrap`}>{title}</span>
         <img
             alt={iconAlt ??
                 'Icon that describes that the surrounding container is a a clickable anchor'}

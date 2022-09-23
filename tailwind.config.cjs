@@ -24,7 +24,8 @@ module.exports = {
                 'light-1': '#e5e5e5',
             },
             borderRadius: {
-                '4xl': '2rem'
+                '4xl': '2rem',
+                '5xl': '2.5rem',
             },
             placeholderColor: {
                 'dark-1': '#ffffff',
