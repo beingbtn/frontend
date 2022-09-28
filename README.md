@@ -1,1 +1,1 @@
-this project is a joke and the login system is very unsecure: do not use this code
+this project is a joke
