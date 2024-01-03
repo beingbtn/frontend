@@ -17,4 +17,5 @@ export default defineConfig({
         }),
     ],
     site: 'https://btn.attituding.xyz',
+    base: 'frontend',
 });
